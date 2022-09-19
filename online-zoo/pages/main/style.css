@@ -15,7 +15,7 @@
 .left_block {
   display: flex;
   align-items: center;
-  gap: 58px;
+  gap: 63px;
 }
 .header_logo {
   position: relative;
@@ -42,6 +42,7 @@
   display: flex;
   gap: 58px;
 }
+
 .nav_header a {
   font-family: "Roboto";
   font-weight: 500;
@@ -49,7 +50,6 @@
 }
 .figma_link a {
   font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
@@ -60,8 +60,7 @@
   display: flex;
   max-width: 100vw;
   justify-content: center;
-  background-image: url("../../assets/images/section_one/bg_panda.png");
-  background-repeat: no-repeat;
+  background: url("../../assets/images/section_one/bg_panda.png") 100% 100% no-repeat;
   background-size: cover;
 }
 .favorite_animal_online {
@@ -70,7 +69,7 @@
   width: 1160px;
   height: 700px;
   align-items: flex-end;
-  gap: 60px;
+  gap: 70px;
 }
 .favorite_animal {
   position: relative;
@@ -79,7 +78,7 @@
   height: 465px;
   background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   border-radius: 100%;
-  margin-right: 90px;
+  margin-right: 108px;
 }
 .ellipse {
   font-family: "Roboto";
@@ -91,7 +90,7 @@
   color: #ffffff;
   position: absolute;
   top: 74px;
-  left: 73px;
+  left: 86px;
 }
 .ellipse span {
   color: #ffee2e;
@@ -99,7 +98,7 @@
 .button {
   width: 298px;
   height: 54px;
-  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  background: #FE9013 ;
   border-radius: 25px;
   font-family: "Roboto";
   font-weight: 500;
@@ -107,6 +106,7 @@
   line-height: 140%;
   text-transform: uppercase;
   color: #ffffff;
+  margin-right: 99px;
 }
 
 /*THE BACKSTAGE*/
@@ -116,12 +116,12 @@
   max-width: 100vw;
   background-image: url(../../assets/images/section_two/s2-flower-bg.png);
   background-repeat: no-repeat;
-  background-position: right 0;
+  background-position: right 12px;
 }
 .container_section_two {
   display: flex;
   gap: 85px;
-  height: 617px;
+  height: 583px;
   width: 1160px;
   margin-top: 140px;
 }
@@ -136,7 +136,7 @@
 .main_description {
   font-family: "Roboto";
   font-size: 16px;
-  line-height: 130%;
+  line-height: 135%;
   color: #333b41;
   margin-bottom: 54px;
 }
@@ -146,11 +146,11 @@
   color: #333b41;
   margin-bottom: 34px;
 }
-.description {
+.description_section_2 {
   font-family: "Roboto";
   font-weight: 400;
   font-size: 16px;
-  line-height: 140%;
+  line-height: 141%;
   color: #333b41;
 }
 
@@ -175,7 +175,7 @@
 .scroll_animals {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 }
 .one_block_image {
   outline: 1px solid #fe9013;
@@ -189,8 +189,7 @@
   justify-content: space-between;
   margin-left: 16px;
   margin-right: 16px;
-  margin-top: 8px;
-  margin-bottom: 14px;
+  margin-top: 4px;
 }
 .name_pet {
   font-family: "Roboto";
@@ -209,6 +208,29 @@
 }
 .container_section_three button {
   border: none;
+  margin-right: 0;
+}
+.bottom_image {
+  margin-top: -10px;
+}
+.arrow_right  {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: #FE9013;
+  border: none;
+  margin-left: 20px;
+  margin-top: 403px;
+}
+.arrow_left {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: #FE9013;
+  border: none;  
+  margin-right: 20px;
+  
+  margin-top: 403px;
 }
 /*Pick and feed a friend*/
 .section_4 {
@@ -286,6 +308,9 @@
   color: #333b41;
   margin-bottom: 10px;
 }
+.description {
+  margin-left: 30px;
+}
 .descroption_section_four {
   font-family: "Roboto";
   font-style: normal;
@@ -341,6 +366,7 @@
 }
 .container_section_four button {
   border: none;
+  margin: 0;
 }
 .icon_section_four {
   margin-top: 62px;
@@ -352,9 +378,9 @@
   justify-content: center;
   max-width: 100vw;
   background: #ffffff;
-  height: 967px;
-  background: url(../../assets/images/section_five/bg_section5.png) no-repeat
-    right bottom;
+  height: 919px;
+  background: url(../../assets/images/section_five/bg_section5.png) no-repeat;
+  background-position: right 0 bottom -132px;
 }
 .container_section_five {
   display: flex;
@@ -378,6 +404,7 @@
 }
 .one_testimonial_block {
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   width: 268px;
   height: 391px;
@@ -391,8 +418,7 @@
   display: flex;
   gap: 10px;
   margin-top: 15px;
-  margin-left: 18px;
-  margin-right: 18px;
+  margin-left: 15px;
 }
 .user_info {
   display: flex;
@@ -432,14 +458,12 @@
   overflow: hidden;
   width: 237px;
   height: 309px;
-  margin-top: 10px;
-  margin-bottom: 19px;
-  margin-left: 18px;
-  margin-right: 18px;
+  margin-top: 5px;
+  margin-left: 15px;
 }
 .section_five_line {
   width: 599px;
-  height: 8px;
+  height: 6px;
   background: #f5f7f6;
   border: 0.5px solid;
   border-color: #febdab;
@@ -450,6 +474,7 @@
   border: none;
   border-radius: 5px;
   margin-top: 31px;
+  margin-left: -763px;
 }
 /*FOOTER*/
 .footer_wrapper {
@@ -465,8 +490,27 @@
   margin-top: 41px;
   margin-bottom: 50px;
 }
-.block_footer_left {
-  margin-right: 101px;
+
+.footer_logo {
+  position: relative;
+  box-sizing: border-box;
+  border: 1.18841px solid #ffffff;
+  width: 82px;
+  height: 52px;
+  padding: 1px 5px;
+}
+.footer_logo h1 {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 19.0145px;
+  line-height: 120%;
+  text-align: center;
+  margin: 0;
+}
+.footer_logo img {
+  position: absolute;
+  top: 20px;
+  left: 10px;
 }
 .block_footer_left button {
   margin-top: 68px;
@@ -520,4 +564,16 @@ justify-content: space-between;
   line-height: 130%;
   color: #ffffff;
   text-align: right;
+}
+
+/*header active*/
+.active {
+  color: #FE9013 ;
+}
+/*button section one active*/
+button:hover {
+  cursor: pointer;
+  background: #E47209;
+  box-sizing: border-box;
+  transition: 0.5s;
 }
