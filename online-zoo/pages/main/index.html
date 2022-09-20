@@ -87,7 +87,7 @@
     </div>
 
     <div class="section_three">
-      <button class="arrow_left"><img src="../../assets/icons/section_three_icons/arrow_left.png" alt="arrow_left"></button>
+      <button class="arrow_left button"><img src="../../assets/icons/section_three_icons/arrow_left.png" alt="arrow_left"></button>
       <div class="container_section_three">
         <div class="scroll_animals">
           <div class="one_block_image">
@@ -201,7 +201,7 @@
         </div>
         <button class="button">choose your favorite</button>
       </div>
-      <button class="arrow_right"><img src="../../assets/icons/section_three_icons/arrow_right.png" alt="arrow_right"></button>
+      <button class="arrow_right button"><img src="../../assets/icons/section_three_icons/arrow_right.png" alt="arrow_right"></button>
     </div>
 
     <div class="section_4">
@@ -404,7 +404,7 @@
             </div>
           </div>
         </div>
-        <div class="section_five_line"></div>
+        <input type="range" min="2" max="6" step="1" value="6" id="range" class="section_five_line">
         <button class="button">Leave feedback</button>
       </div>
     </div>
@@ -417,44 +417,48 @@
             </h1>
             <img src="../../assets/icons/header_icons/header-logo.png" alt="footer_logo" />
           </div>
-          <button class="button">Donate for volunteers</button>
+          <a href="../donate/index.html">
+            <button class="button">Donate for volunteers</button>
+          </a>
           <div class="social_links">
-            <div class="one_social_link">
+          <a href="https://ru-ru.facebook.com/groups/TheRollingScopes/" class="one_social_link">
               <img
-                src="../../assets/icons/footer_icons/facebook.png"
-                alt="facebook"
-              />
-              <a href="#">Facebook</a>
-            </div>
-            <div class="one_social_link">
+              src="../../assets/icons/footer_icons/icons8-facebook-f.svg"
+              alt="facebook"
+            />
+            <span>Facebook</span>
+            </a>
+            <a href="https://twitter.com/?lang=ru" class="one_social_link">
               <img
-                src="../../assets/icons/footer_icons/twitter.png"
+                src="../../assets/icons/footer_icons/icons8-твиттер.svg"
                 alt="twitter"
               />
-              <a href="#">Twitter</a>
-            </div>
-            <div class="one_social_link">
+              <span>Twitter</span>
+            </a>
+            <a href="https://www.instagram.com/rsschool_news/" class="one_social_link">
               <img
-                src="../../assets/icons/footer_icons/instagram.png"
+                src="../../assets/icons/footer_icons/icons8-instagram-26.svg"
                 alt="instagram"
               />
-              <a href="#">Instagram</a>
-            </div>
-            <div class="one_social_link">
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.youtube.com/c/RollingScopesSchool?app=desktop" class="one_social_link">
               <img
-                src="../../assets/icons/footer_icons/youtube.png"
+                src="../../assets/icons/footer_icons/icons8-youtube-play-23.svg"
                 alt="youtube"
               />
-              <a href="#">Youtube</a>
-            </div>
+              <span>YouTube</a>
+            </a> 
+
           </div>
-        </div>
+          </div>
+
         <div class="block_footer_nav">
-          <div class="nav_header">
-            <a href="#" class="active">About</a>
-            <a href="#">Map</a>
-            <a href="#">Zoos</a>
-            <a href="#">Contact us</a>
+          <div class="nav_footer">
+            <a href="../main/index.html" class="active link_footer">About</a>
+            <a href="https://www.maximonline.ru/longreads/karta-skolko-kotov-zhivet-v-raznykh-stranakh-evropy-id620384/" class="link_footer">Map</a>
+            <a href="https://krasivosti.pro/koshki/8743-samye-krasivye-kotiki.html" class="link_footer">Zoos</a>
+            <a href="https://rs.school/" class="link_footer">Contact us</a>
           </div>
         </div>
         <div class="block_footer_right">
@@ -462,7 +466,7 @@
             <div class="email_title">Subscribe to our news</div>
             <div class="subscribe_to_email">
               <input type="email" placeholder="Enter your email" />
-              <button>Submit</button>
+              <button class="footer_button">Submit</button>
             </div>
           </div>
           <div class="block_subscribe_rss">
@@ -471,6 +475,7 @@
           </div>
         </div>
       </footer>
+    </div>
     </div>
     <script src="script.js"></script>
   </body>

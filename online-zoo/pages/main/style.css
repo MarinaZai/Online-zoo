@@ -60,7 +60,8 @@
   display: flex;
   max-width: 100vw;
   justify-content: center;
-  background: url("../../assets/images/section_one/bg_panda.png") 100% 100% no-repeat;
+  background: url("../../assets/images/section_one/bg_panda.png") 100% 100%
+    no-repeat;
   background-size: cover;
 }
 .favorite_animal_online {
@@ -98,7 +99,7 @@
 .button {
   width: 298px;
   height: 54px;
-  background: #FE9013 ;
+  background: #fe9013;
   border-radius: 25px;
   font-family: "Roboto";
   font-weight: 500;
@@ -182,6 +183,7 @@
   border-radius: 5px;
   width: 366px;
   height: 426px;
+  overflow: hidden;
 }
 .description_image {
   display: flex;
@@ -213,23 +215,24 @@
 .bottom_image {
   margin-top: -10px;
 }
-.arrow_right  {
+.arrow_right {
   width: 62px;
   height: 62px;
   border-radius: 50%;
-  background-color: #FE9013;
+  background-color: #fe9013;
   border: none;
   margin-left: 20px;
   margin-top: 403px;
+  margin-right: 0;
 }
 .arrow_left {
   width: 62px;
   height: 62px;
   border-radius: 50%;
-  background-color: #FE9013;
-  border: none;  
+  background-color: #fe9013;
+  border: none;
   margin-right: 20px;
-  
+
   margin-top: 403px;
 }
 /*Pick and feed a friend*/
@@ -461,7 +464,9 @@
   margin-top: 5px;
   margin-left: 15px;
 }
-.section_five_line {
+
+input[type='range'] {
+  overflow: hidden;
   width: 599px;
   height: 6px;
   background: #f5f7f6;
@@ -469,13 +474,24 @@
   border-color: #febdab;
   border-radius: 5px;
   margin-top: 21px;
+  -webkit-appearance: none;
 }
+input[type='range']::-webkit-slider-thumb {
+  width: 115.19px;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  height: 6px;
+  cursor: pointer;
+  background: #FE9013;
+}
+
 .container_section_five button {
   border: none;
   border-radius: 5px;
   margin-top: 31px;
   margin-left: -763px;
 }
+
 /*FOOTER*/
 .footer_wrapper {
   display: flex;
@@ -513,24 +529,51 @@
   left: 10px;
 }
 .block_footer_left button {
+  box-sizing: border-box;
   margin-top: 68px;
-  margin-bottom: 44px;
   border-radius: 5px;
 }
-.social_links {
+
+ .social_links {
+  margin-top: 38px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
+.one_social_link {
+  display: flex;
+  align-items: center;
+}
+.one_social_link img {
+  padding: 7px;
+} 
+.one_social_link span {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+} 
+
 .block_footer_nav {
   display: flex;
   flex-direction: column-reverse;
-  margin-right: 32px;
+}
+.nav_footer {
+  display: flex;
+  gap: 58px;
+}
+
+.nav_footer a {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
 }
 .block_footer_right {
   display: flex;
   flex-direction: column;
-justify-content: space-between;
+  justify-content: space-between;
+  margin-left: 30px;
 }
 .email_title {
   font-family: "Roboto";
@@ -545,35 +588,73 @@ justify-content: space-between;
   height: 42px;
   border: 1px solid #fe9013;
   border-radius: 5px;
+  box-sizing: border-box;
   background-color: #111115;
   padding: 0;
   margin-right: 10px;
 }
 .subscribe_to_email button {
-  width: 130px;
+  width: 129px;
   height: 42px;
-  border: 1px solid #4b9200;
+  border: 1px solid #333b41;
   border-radius: 5px;
-  color: #4b9200;
+  box-sizing: border-box;
+  color: #000000;
   padding: 0;
 }
 .block_subscribe_rss {
   font-family: "Roboto";
   font-weight: 100;
   font-size: 16px;
-  line-height: 130%;
+  line-height: 195%;
   color: #ffffff;
   text-align: right;
+  margin-bottom: -5px;
 }
 
 /*header active*/
 .active {
-  color: #FE9013 ;
+  color: #fe9013;
 }
 /*button section one active*/
 button:hover {
   cursor: pointer;
-  background: #E47209;
+  background: #e47209;
   box-sizing: border-box;
   transition: 0.5s;
 }
+.button:focus {
+  background-color: #4b9200;
+}
+.footer_button:focus {
+  border: 1px solid #4b9200;
+  box-sizing: border-box;
+  color: #4b9200;
+  padding: 0;
+}
+
+.one_block_image {
+  position: relative;
+  transition: 0.25s;
+}
+.one_block_image:hover {
+  transform: scale(1.05, 1.05);
+  height: 366px;
+}
+.one_block_image:hover .text {
+  position: absolute;
+  top: 0px;
+  box-shadow: 0 0 0 77777px rgba(0, 0, 0, 0.5);
+}
+.one_block_image:hover .text .name_pet{
+  color: #f1f3f2;
+}
+.one_block_image:hover .text .description_pet{
+  color: #f1f3f2;
+} 
+/*five section line*/
+/* .section_five_line:hover {
+  cursor: pointer;
+  transition: 0.5s;
+}
+ */
