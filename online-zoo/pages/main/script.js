@@ -13,9 +13,32 @@ for (let i = 0; i < links.length; i++) {
 const linkContainerFooter = document.getElementsByClassName("nav_footer");
 const linksFooter = linkContainerFooter[0].getElementsByClassName("link_footer");
 for (let i = 0; i < linksFooter.length; i++) {
-  linksFooter[i].addEventListener("click", function() {
+  linksFooter[i].addEventListener("click", function(e) {
+    e.preventDefault()
     let current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
+    current[1].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
 } 
+
+//validate email
+const emailField = document.getElementById("email-input");
+const button = document.getElementsByClassName("footer_button");
+
+button[0].addEventListener("click", function () {
+  const email = emailField.value;
+  if (validateEmail(email)) {  
+  } else {
+    emailField.className = "error"
+    button[0].className += " error"
+  }
+});
+
+emailField.addEventListener("input", (e) => {
+  emailField.classList.remove("error");
+  button[0].classList.remove("error");
+})
+function validateEmail(email) {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
