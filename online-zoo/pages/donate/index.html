@@ -78,7 +78,17 @@
         </div>
         <div class="amount_text">Amount</div>
         <div class="range_amount">
-          <input type="range" min="2" max="6" step="1" value="6" id="range" class="section_five_line">
+          <input type="range" min="1" max="8" step="1" value="8" id="range" list="tickmarks">
+          <datalist id="tickmarks">
+            <option value="5000" label="$5000"></option>
+            <option value="10" label="$2000"></option>
+            <option value="20" label="$1000"></option>
+            <option value="30" label="$500"></option>
+            <option value="40" label="$250"></option>
+            <option value="50" label="$100"></option>
+            <option value="60" label="$50"></option>
+            <option value="70" label="$25"></option>
+          </datalist>
           <!-- ????????????????????? -->
         </div>
         <div class="feed_a_friend">
@@ -86,11 +96,11 @@
           <div class="checkbox_inputs">
             <form action="">
               <label for="">
-                <input type="radio" name="Monthly" id="">
+                <input type="radio" name="Monthly" id="Monthly" >
                 Monthly
               </label>
               <label for="">
-                <input type="radio" name="Once" id="">
+                <input type="radio" name="Once" id="Once" checked="true">
                 Once
               </label>
             </form>

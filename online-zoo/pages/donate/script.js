@@ -42,3 +42,20 @@ function validateEmail(email) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
+
+//number limit
+function numberLimit (number_amount, limit) {
+  var t = typeof number_amount === "string" ? document.querySelector (number_amount) : number_amount,
+  f = function (e) {
+      var v = t.value.split ("");
+      if (v.length > limit) {
+            t.value = v.slice(0, limit).join("");
+      }
+  };
+  t.addEventListener ("input", f);
+}
+window.addEventListener ("load", function () {
+  numberLimit("#number_amount", 4);
+})
+
+
