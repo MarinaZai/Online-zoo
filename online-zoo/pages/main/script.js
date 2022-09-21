@@ -21,7 +21,7 @@ for (let i = 0; i < linksFooter.length; i++) {
   });
 } 
 
-//validate email
+//Validate email
 const emailField = document.getElementById("email-input");
 const button = document.getElementsByClassName("footer_button");
 
