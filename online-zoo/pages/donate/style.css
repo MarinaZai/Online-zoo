@@ -219,14 +219,14 @@ input[type="range"] {
   /* overflow: hidden; */
   width: 976px;
   height: 27px;
-  background: #404950;
+  /*  background: #404950; */
   border: 2px solid;
-  border-color: #404950;
+  /*   border-color: #404950; */
   -webkit-appearance: none;
   margin-top: 15px;
   box-sizing: border-box;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 9px;
+  padding-right: 13px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -236,18 +236,26 @@ input[type="range"]::-webkit-slider-thumb {
   height: 10px;
   cursor: pointer;
   background: #FFEE2E;
-
+  padding-left: 0;
+  padding-right: 0;
 }
 
-input[type="range"]::-webkit-slider-thumb:active {
-  overflow:visible;
+input[type="range"]::-webkit-slider-thumb {
+  overflow: visible;
   width: 40px;
   height: 40px;
-  background: url(../../assets/images/donate_page_image/roller_icon.png), url(../../assets/images/donate_page_image/Ellipse\ 9.png);
+  background: url(../../assets/images/donate_page_image/roller_icon.png)
+  
+    /* , url(../../assets/images/donate_page_image/Ellipse\ 9.png) */
+  ;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
+  padding-left: 0px;
+  padding-right: 0px;
+  ;
 }
+
 datalist {
   display: flex;
   justify-content: space-between;
@@ -256,11 +264,12 @@ datalist {
   font-size: 26px;
   line-height: 140%;
   color: #333B41;
-  width: 936px;
+  width: 100%;
   margin-top: 7px;
-  gap: 67px;
 }
-
+datalist option {
+    width: 68px;
+}
 .feed_a_friend {
   display: flex;
   flex-direction: column;
@@ -281,10 +290,16 @@ datalist {
   margin-top: 49px;
 }
 
-#number_amount{
+#number_amount {
   background-image: url(../../assets/images/donate_page_image/usd.png);
   background-repeat: no-repeat;
   background-position: 96%;
+}
+
+#range {
+  background-image: url(../../assets/images/donate_page_image/Group\ 2.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 
 #number_amount:focus {
@@ -342,6 +357,7 @@ input[type='radio']:after {
   visibility: visible;
   border: 2px solid white;
 }
+
 input[type='radio']:checked:after {
   width: 15px;
   height: 15px;
@@ -518,6 +534,7 @@ input[type='radio']:checked:after {
   color: #929699;
   padding-left: 5px;
 }
+
 .subscribe_to_email button {
   width: 129px;
   height: 42px;
