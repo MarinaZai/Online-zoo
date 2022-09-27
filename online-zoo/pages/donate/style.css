@@ -228,7 +228,6 @@ input[type="range"] {
   padding-left: 9px;
   padding-right: 13px;
 }
-
 input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
   -webkit-appearance: none;
@@ -239,13 +238,11 @@ input[type="range"]::-webkit-slider-thumb {
   padding-left: 0;
   padding-right: 0;
 }
-
 input[type="range"]::-webkit-slider-thumb {
   overflow: visible;
   width: 40px;
   height: 40px;
   background: url(../../assets/images/donate_page_image/roller_icon.png)
-  
     /* , url(../../assets/images/donate_page_image/Ellipse\ 9.png) */
   ;
   background-repeat: no-repeat;
@@ -255,7 +252,6 @@ input[type="range"]::-webkit-slider-thumb {
   padding-right: 0px;
   ;
 }
-
 datalist {
   display: flex;
   justify-content: space-between;
@@ -270,6 +266,8 @@ datalist {
 datalist option {
     width: 68px;
 }
+
+
 .feed_a_friend {
   display: flex;
   flex-direction: column;
@@ -592,3 +590,6 @@ button:hover {
   border-color: red;
   color: red;
 }
+
+
+
