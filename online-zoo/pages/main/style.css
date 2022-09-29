@@ -4,21 +4,21 @@
   justify-content: center;
   max-width: 100%;
   background: #000000;
-  height: 80px;
+  padding: 14px 0.9vw;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  width: 1160px;
+  max-width: 1160px;
   align-items: center;
-  /*  height: 80px; */
 }
 
 .left_block {
   display: flex;
   align-items: center;
-  gap: 63px;
+  gap: 4vw;
+  padding-right: 27vw;
 }
 
 .header_logo {
@@ -27,7 +27,7 @@
   border: 1.18841px solid #ffffff;
   width: 82px;
   height: 52px;
-  padding: 4px 5px;
+  padding: 3px 3px;
 }
 
 .header_logo h1 {
@@ -42,12 +42,12 @@
 .header_logo img {
   position: absolute;
   top: 20px;
-  left: 10px;
+  left: 6px;
 }
 
 .nav_header {
   display: flex;
-  gap: 58px;
+  gap: 3.6vw;
 }
 
 .nav_header a {
@@ -67,9 +67,9 @@
 .section_one {
   display: flex;
   max-width: 100vw;
+  height: 43.2vw;
   justify-content: center;
-  /* background: url("../../assets/images/section_one/bg_panda.png") no-repeat top center; */
-  background: url("../../assets/images/section_one/bg_panda.png") 100% 100% no-repeat; 
+  background: url("../../assets/images/section_one/bg_panda.png") 100% 100% no-repeat;
   background-size: cover;
 }
 
@@ -77,9 +77,8 @@
   display: flex;
   flex-direction: column;
   width: 1160px;
-  height: 700px;
   align-items: flex-end;
-  gap: 70px;
+  gap: 8vh;
 }
 
 .favorite_animal {
@@ -121,6 +120,129 @@
   text-transform: uppercase;
   color: #ffffff;
   margin-right: 99px;
+}
+
+@media screen and (max-width: 1250px) {
+  .left_block {
+    gap: 6vw;
+    padding-right: 26vw;
+  }
+
+  .nav_header {
+    gap: 4.6vw;
+  }
+
+  .section_one {
+    background: url(../../assets/images/section_one/Giant\ Panda.png) 100% 100% no-repeat;
+    background-size: cover;
+    height: 49.6vw;
+  }
+
+  .favorite_animal_online {
+    gap: 5vh;
+  }
+
+  .favorite_animal_online button {
+    margin-right: 139px;
+    border: none;
+  }
+
+  .favorite_animal {
+    width: 367px;
+    height: 367px;
+    margin-right: 178px;
+    margin-top: -10px;
+  }
+
+  .ellipse {
+    font-size: 85.2px;
+    top: 54px;
+    left: 69px;
+  }
+
+  .section_two {
+    background-image: none;
+  }
+}
+
+
+
+@media screen and (min-width: 779.99px) {
+  .burger-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .favorite_animal_online button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .header {
+    display: none;
+  }
+  .header_wrapper {
+    justify-content: space-between;
+    padding: 0px 15px;
+  }
+  .header_logo {
+    width: 56px;
+    height: 33px;
+    padding: 3px 3px;
+    border: none;
+  }
+  .header_logo h1 {
+    font-size: 12.2899px;
+  }
+  .header_logo img {
+    top: 12px;
+    left: 5px;
+  }
+  .section_one {
+    height: 51.6vw;
+  }
+  .favorite_animal_online {
+    gap: 0vh;
+  }
+  .favorite_animal_online button {
+    margin-right: 321px;
+  }
+  .favorite_animal {
+    width: 237.6px;
+    height: 237.6px;
+    margin-right: 73px;
+    margin-top: 11px;
+  }
+  .ellipse {
+    font-size: 54.2894px;
+    top: 39px;
+    left: 45px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header_wrapper {
+    padding: 0px 6px;
+  }
+  .menu-btn {
+    right: 10px;
+  }
+  .section_one {
+    height: 55.6vw;
+  }
+  .favorite_animal {
+    width: 119.09px;
+    height: 119.09px;
+    margin-right: 38px;
+    margin-top: 22px;
+  }
+  .ellipse {
+    font-size: 28px;
+    top: 20px;
+    left: 19px;
+  }
 }
 
 /*THE BACKSTAGE*/
@@ -764,10 +886,10 @@ button:hover {
 .menu-btn {
   display: flex;
   position: absolute;
-  top: 34px;
-  right: 30px;
+  top: 19px;
+  right: 20px;
   width: 18px;
-  height: 10px;
+  height: 14px;
   cursor: pointer;
   z-index: 1;
 }
@@ -799,10 +921,10 @@ button:hover {
   visibility: hidden;
   top: 0;
   left: -100%;
-  width: 300px;
+  width: 181px;
   height: 100%;
   margin: 0;
-  padding: 80px 0;
+  padding: 25px 0;
   list-style: none;
   background-color: #FFFFFF;
   box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
@@ -828,6 +950,7 @@ button:hover {
 
 
 #menu-toggle {
+  position: absolute;
   opacity: 0;
 }
 
@@ -850,11 +973,6 @@ button:hover {
   left: 0;
 }
 
-@media screen and (min-width: 995px) {
-  .burger-menu {
-    display: none;
-  }
-}
 
 /* @media screen and (max-width: 800px) {
   .header {
@@ -862,8 +980,9 @@ button:hover {
   }
 } */
 
-@media screen and (max-width: 1339px
-  /* 1000px */
+/* 1000px */
+/* @media screen and (max-width: 1339px
+
 ) {
   .nav_header {
     gap: 48px;
@@ -1053,8 +1172,9 @@ button:hover {
     gap: 48px;
   }
 
-}
+} */
 
+/* 
 @media screen and (max-width: 994px) {
   .header {
     display: none;
@@ -1074,4 +1194,4 @@ button:hover {
   .testimonial_one_user {
     max-width: 100%;
   }
-}
+} */
