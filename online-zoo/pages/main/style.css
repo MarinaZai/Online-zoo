@@ -122,129 +122,6 @@
   margin-right: 99px;
 }
 
-@media screen and (max-width: 1250px) {
-  .left_block {
-    gap: 6vw;
-    padding-right: 26vw;
-  }
-
-  .nav_header {
-    gap: 4.6vw;
-  }
-
-  .section_one {
-    background: url(../../assets/images/section_one/Giant\ Panda.png) 100% 100% no-repeat;
-    background-size: cover;
-    height: 49.6vw;
-  }
-
-  .favorite_animal_online {
-    gap: 5vh;
-  }
-
-  .favorite_animal_online button {
-    margin-right: 139px;
-    border: none;
-  }
-
-  .favorite_animal {
-    width: 367px;
-    height: 367px;
-    margin-right: 178px;
-    margin-top: -10px;
-  }
-
-  .ellipse {
-    font-size: 85.2px;
-    top: 54px;
-    left: 69px;
-  }
-
-  .section_two {
-    background-image: none;
-  }
-}
-
-
-
-@media screen and (min-width: 779.99px) {
-  .burger-menu {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 620px) {
-  .favorite_animal_online button {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 780px) {
-  .header {
-    display: none;
-  }
-  .header_wrapper {
-    justify-content: space-between;
-    padding: 0px 15px;
-  }
-  .header_logo {
-    width: 56px;
-    height: 33px;
-    padding: 3px 3px;
-    border: none;
-  }
-  .header_logo h1 {
-    font-size: 12.2899px;
-  }
-  .header_logo img {
-    top: 12px;
-    left: 5px;
-  }
-  .section_one {
-    height: 51.6vw;
-  }
-  .favorite_animal_online {
-    gap: 0vh;
-  }
-  .favorite_animal_online button {
-    margin-right: 321px;
-  }
-  .favorite_animal {
-    width: 237.6px;
-    height: 237.6px;
-    margin-right: 73px;
-    margin-top: 11px;
-  }
-  .ellipse {
-    font-size: 54.2894px;
-    top: 39px;
-    left: 45px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .header_wrapper {
-    padding: 0px 6px;
-  }
-  .menu-btn {
-    right: 10px;
-  }
-  .section_one {
-    height: 55.6vw;
-  }
-  .favorite_animal {
-    width: 119.09px;
-    height: 119.09px;
-    margin-right: 38px;
-    margin-top: 22px;
-  }
-  .ellipse {
-    font-size: 28px;
-    top: 20px;
-    left: 19px;
-  }
-}
-
 /*THE BACKSTAGE*/
 .section_two {
   display: flex;
@@ -257,18 +134,22 @@
 
 .container_section_two {
   display: flex;
-  gap: 85px;
-  height: 583px;
+  /*   gap: 85px;
+  height: 583px; */
+  height: 36vw;
+  gap: 5.3vw;
   width: 1160px;
   margin-top: 140px;
 }
-
+.picture_grand {
+  max-width: 38vw;
+}
 .main_title {
   font-family: "Roboto";
   font-size: 48px;
   line-height: 120%;
   color: #333b41;
-  margin-bottom: 20px;
+  margin-bottom: 1.4vw;
 }
 
 .main_description {
@@ -276,14 +157,14 @@
   font-size: 16px;
   line-height: 135%;
   color: #333b41;
-  margin-bottom: 54px;
+  margin-bottom: 3.4vw;
 }
 
 .title {
   font-family: "Roboto";
   font-size: 24px;
   color: #333b41;
-  margin-bottom: 34px;
+  margin-bottom: 2vw;
 }
 
 .description_section_two {
@@ -380,6 +261,185 @@
   border: none;
   margin-right: 20px;
   margin-top: 403px;
+}
+
+@media screen and (max-width: 1250px) {
+  .left_block {
+    gap: 6vw;
+    padding-right: 26vw;
+  }
+  .nav_header {
+    gap: 4.6vw;
+  }
+  .section_one {
+    background: url(../../assets/images/section_one/Giant\ Panda.png) 100% 100% no-repeat;
+    background-size: cover;
+    height: 49.6vw;
+  }
+  .favorite_animal_online {
+    gap: 5vh;
+  }
+  .favorite_animal_online button {
+    margin-right: 139px;
+    border: none;
+  }
+  .favorite_animal {
+    width: 367px;
+    height: 367px;
+    margin-right: 178px;
+    margin-top: -10px;
+  }
+  .ellipse {
+    font-size: 85.2px;
+    top: 54px;
+    left: 69px;
+  }
+  .section_two {
+    background-image: none;
+  }
+  .container_section_two {
+    gap: 2.9vw;
+    margin-top: 101px;
+    padding-left: 30px;
+  }
+  .picture_grand {
+    max-width: 44.8vw;
+    height: 40vw;
+    padding-top: 9px;
+  }
+}
+
+@media screen and (min-width: 779.99px) {
+  .burger-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 620px) {
+   .favorite_animal_online button {
+        margin-right: 14px;
+       margin-bottom: -23%;
+  } 
+}
+
+@media screen and (max-width: 780px) {
+  .header {
+    display: none;
+  }
+
+  .header_wrapper {
+    justify-content: space-between;
+    padding: 0px 15px;
+  }
+
+  .header_logo {
+    width: 56px;
+    height: 33px;
+    padding: 3px 3px;
+    border: none;
+  }
+
+  .header_logo h1 {
+    font-size: 12.2899px;
+  }
+
+  .header_logo img {
+    top: 12px;
+    left: 5px;
+  }
+
+  .section_one {
+    height: 51.6vw;
+  }
+
+  .favorite_animal_online {
+    gap: 0vh;
+  }
+
+  .favorite_animal {
+    width: 237.6px;
+    height: 237.6px;
+    margin-right: 73px;
+    margin-top: 11px;
+  }
+
+  .ellipse {
+    font-size: 54.2894px;
+    top: 39px;
+    left: 45px;
+  }
+  .section_two {
+    background-image: url(../../assets/images/section_two/flower_foto1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right -6px;
+  }
+  .picture_grand {
+    display: none;
+  }
+  .container_section_two {
+    height: 68vw;
+    gap: 0;
+    margin-top: 60px;
+    padding-left: 24px;
+  }
+  .text_block_section_two {
+    width: 74vw;
+  }
+  .main_title {
+    margin-bottom: 3.4vw;
+  }
+  .main_description {
+    margin-bottom: 4.4vw;
+  }
+  .title {
+    margin-bottom: 3vw; 
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header_wrapper {
+    padding: 0px 6px;
+  }
+
+  .menu-btn {
+    right: 10px;
+  }
+
+  .section_one {
+    height: 55.6vw;
+  }
+
+  .favorite_animal {
+    width: 119.09px;
+    height: 119.09px;
+    margin-right: 38px;
+    margin-top: 22px;
+    margin-bottom: 66px;
+  }
+
+  .ellipse {
+    font-size: 28px;
+    top: 20px;
+    left: 19px;
+  }
+  .section_two {
+    background-image: url(../../assets/images/section_two/flower_foto1\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right 40px;
+  }
+  .container_section_two {
+    height: 127vw;
+    margin-top: 106px;
+    padding-left: 10px
+  }
+  .text_block_section_two {
+    width: 87vw;
+  }
+  .main_title {
+    font-size: 24px;
+  }
 }
 
 /*Pick and feed a friend*/
