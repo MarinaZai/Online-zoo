@@ -42,3 +42,11 @@ function validateEmail(email) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
+
+
+/* nav delete to click on overlay */
+const menu_toggle = document.querySelector('#menu-toggle');
+const overlay = document.querySelector('.overlay');
+overlay.addEventListener('click', e => { 
+  menu_toggle.checked = false
+})

@@ -58,4 +58,9 @@ window.addEventListener ("load", function () {
   numberLimit("#number_amount", 4);
 })
 
-
+/* nav delete to click on overlay */
+const menu_toggle = document.querySelector('#menu-toggle');
+const overlay = document.querySelector('.overlay');
+overlay.addEventListener('click', e => { 
+  menu_toggle.checked = false
+})
