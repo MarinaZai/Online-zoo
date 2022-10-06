@@ -199,16 +199,6 @@ const scrollAnimals = document.querySelector('.scroll_animals');
 
 let parentElement
 
-/* shuffledAnimals.forEach((card, index) => {
-  let cardElem = createSlideElement(card)
-  if (index % 2 === 0) {
-    parentElement = createParentSlideElement()
-    parentElement.appendChild(cardElem)
-  } else {
-    parentElement.appendChild(cardElem)
-    scrollAnimals.appendChild(parentElement)
-  }
-}) */
 
 const elementsForRender = generationTwoBlocks(shuffledAnimals)
 elementsForRender.forEach((item) => {
@@ -234,15 +224,9 @@ function generationTwoBlocks(data) {
 }
 let twoBlocks = document.querySelectorAll(".two_blocks")
 
-let slidesToShow = 3;
-let slidesToScroll = 3;
-let itemsCount = twoBlocks.length;
-let itemWidth = scrollAnimals.offsetWidth / slidesToShow
-let movePosition = slidesToScroll * itemWidth + 28;
-let position = -movePosition;
-let index = 0
 let isAnimateFinished = true
 next.addEventListener('click', e => {
+  console.log("ffffffff")
   if (isAnimateFinished) {
     isAnimateFinished = false
     scrollAnimals.innerHTML = '';
@@ -275,72 +259,3 @@ prev.addEventListener('click', e => {
     }, 980)
   }
 })
-
-/* next.addEventListener('click', e => {
-  if (position <= -(itemsCount - slidesToShow) * itemWidth) {
-    let blocksToAppend = shuffle(arrAnimal)
-    blocksToAppend = window.innerWidth > 1350 ? blocksToAppend.slice(0, 6) : blocksToAppend.slice(0, 4)
-    const newBlocks = generationTwoBlocks(blocksToAppend)
-    newBlocks.forEach((item) => {
-      scrollAnimals.append(item.cloneNode(true))
-    })
-  }
-  position -= movePosition
-  scrollAnimals.style.transform = `translateX(${position}px)`
-})
-
-prev.addEventListener('click', e => {
-  if (position === -movePosition) {
-    let blocksToAppend = shuffle(arrAnimal)
-    blocksToAppend = window.innerWidth > 1350 ? blocksToAppend.slice(0, 6) : blocksToAppend.slice(0, 4)
-    console.log(blocksToAppend)
-    const newBlocks = generationTwoBlocks(blocksToAppend)
-    newBlocks.forEach((item) => {
-      scrollAnimals.prepend(item.cloneNode(true))
-    })
- }
- 
-  position += movePosition
-  scrollAnimals.style.transform = `translateX(${position}px)`
-  
-}) */
-
-
-/* next.addEventListener('click', e => {
-  let twoBlocks = document.querySelectorAll(".two_blocks")
-  if (index + 3 > twoBlocks.length - 3) {
-    let blocksToAppend = shuffle(arrAnimal)
-    blocksToAppend = window.innerWidth > 1350 ? blocksToAppend.slice(0, 6) : blocksToAppend.slice(0, 4)
-    const newBlocks = generationTwoBlocks(blocksToAppend)
-    newBlocks.forEach((item) => {
-      scrollAnimals.append(item.cloneNode(true))
-    })
-    twoBlocks = document.querySelectorAll(".two_blocks")
-  }
-  index += 3
-  twoBlocks[index].scrollIntoView({
-    inline: 'start'
-  })
-})
-
-prev.addEventListener('click', e => {
-  let twoBlocks = document.querySelectorAll(".two_blocks")
-  if (index - 3 < 0) {
-    let blocksToAppend = shuffle(arrAnimal)
-    blocksToAppend = window.innerWidth > 1350 ? blocksToAppend.slice(0, 6) : blocksToAppend.slice(0, 4)
-    const newBlocks = generationTwoBlocks(blocksToAppend)
-    newBlocks.forEach((item) => {
-     
-      scrollAnimals.prepend(item.cloneNode(true))
-    })
-    twoBlocks = document.querySelectorAll(".two_blocks")
-    index = 0
-    twoBlocks[index].scrollIntoView()
-
-  } else {
-    index -= 3
-    twoBlocks[index].scrollIntoView()
-  }
-
-})
- */
