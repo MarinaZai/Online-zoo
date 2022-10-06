@@ -201,15 +201,51 @@
 }
 
 /*  */
-.scroll_animals {
-  position: relative;
-  display: flex;
-  gap: 30px;
+
+.slider-wrapper {
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
+}
+.scroll_animals {
+  display: flex;
+  gap: 30px;
+  box-sizing: border-box;
   padding: 1px;
-  scroll-behavior: smooth;
+  transition: all 0.5s;
+  transform: translateX(calc(-100% - 28px));
+}
+
+.fromRightToLeft {
+  animation: 0.5s linear 0s fromRightToLeft;
+}
+
+.fromLeftToRight {
+  animation: 0.5s linear 0s fromLeftToRight;
+}
+
+@keyframes fromRightToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(calc(-200%));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fromLeftToRight {
+  from {
+    opacity: 0;
+    transform: translateX(calc(100%));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
 }
 
 .arrow {
@@ -232,25 +268,7 @@
   top: calc(220% - 30px);
 }
 
-/* .scroll_animals::after {
-  content: url(../../assets/icons/section_three_icons/arrow_elips_1.png);
-  position: absolute;
-  border-radius: 100%;
-  top: 46.2%;
-  right: -79px;
-  cursor: pointer;
-}
 
-.scroll_animals::before {
-  content: url(../../assets/icons/section_three_icons/arrow_elips_2.png);
-  position: absolute;
-  border-radius: 100%;
-  top: 46%;
-  left: -83px;
-  cursor: pointer;
-} */
-
-/*  */
 .two_blocks{
   transition: all 0.5s;
 }

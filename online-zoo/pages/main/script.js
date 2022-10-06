@@ -215,7 +215,7 @@ elementsForRender.forEach((item) => {
   scrollAnimals.appendChild(item)
 })
 
-let index = 0
+
 const prev = document.querySelector('.prev')
 const next = document.querySelector('.next')
 
@@ -232,8 +232,81 @@ function generationTwoBlocks(data) {
     return acc
   }, [])
 }
+let twoBlocks = document.querySelectorAll(".two_blocks")
 
+let slidesToShow = 3;
+let slidesToScroll = 3;
+let itemsCount = twoBlocks.length;
+let itemWidth = scrollAnimals.offsetWidth / slidesToShow
+let movePosition = slidesToScroll * itemWidth + 28;
+let position = -movePosition;
+let index = 0
+let isAnimateFinished = true
 next.addEventListener('click', e => {
+  if (isAnimateFinished) {
+    isAnimateFinished = false
+    scrollAnimals.innerHTML = '';
+    let blocksToAppend = shuffle(arrAnimal)
+    const newBlocks = generationTwoBlocks(blocksToAppend)
+    newBlocks.forEach((item) => {
+      scrollAnimals.append(item.cloneNode(true))
+    })
+    scrollAnimals.classList.add('fromRightToLeft')
+    setTimeout(() => {
+      scrollAnimals.classList.remove('fromRightToLeft')
+      isAnimateFinished = true
+    }, 980)
+  }
+})
+
+prev.addEventListener('click', e => {
+  if (isAnimateFinished) {
+    isAnimateFinished = false
+    scrollAnimals.innerHTML = '';
+    let blocksToAppend = shuffle(arrAnimal)
+    const newBlocks = generationTwoBlocks(blocksToAppend)
+    newBlocks.forEach((item) => {
+      scrollAnimals.append(item.cloneNode(true))
+    })
+    scrollAnimals.classList.add('fromLeftToRight')
+    setTimeout(() => {
+      scrollAnimals.classList.remove('fromLeftToRight')
+      isAnimateFinished = true
+    }, 980)
+  }
+})
+
+/* next.addEventListener('click', e => {
+  if (position <= -(itemsCount - slidesToShow) * itemWidth) {
+    let blocksToAppend = shuffle(arrAnimal)
+    blocksToAppend = window.innerWidth > 1350 ? blocksToAppend.slice(0, 6) : blocksToAppend.slice(0, 4)
+    const newBlocks = generationTwoBlocks(blocksToAppend)
+    newBlocks.forEach((item) => {
+      scrollAnimals.append(item.cloneNode(true))
+    })
+  }
+  position -= movePosition
+  scrollAnimals.style.transform = `translateX(${position}px)`
+})
+
+prev.addEventListener('click', e => {
+  if (position === -movePosition) {
+    let blocksToAppend = shuffle(arrAnimal)
+    blocksToAppend = window.innerWidth > 1350 ? blocksToAppend.slice(0, 6) : blocksToAppend.slice(0, 4)
+    console.log(blocksToAppend)
+    const newBlocks = generationTwoBlocks(blocksToAppend)
+    newBlocks.forEach((item) => {
+      scrollAnimals.prepend(item.cloneNode(true))
+    })
+ }
+ 
+  position += movePosition
+  scrollAnimals.style.transform = `translateX(${position}px)`
+  
+}) */
+
+
+/* next.addEventListener('click', e => {
   let twoBlocks = document.querySelectorAll(".two_blocks")
   if (index + 3 > twoBlocks.length - 3) {
     let blocksToAppend = shuffle(arrAnimal)
@@ -248,24 +321,7 @@ next.addEventListener('click', e => {
   twoBlocks[index].scrollIntoView({
     inline: 'start'
   })
-
-  /* twoBlocks.forEach((item, index) => {
-    if (index < 3) {
-
-   scrollAnimals.appendChild(item.cloneNode(true))
-    }
-  }) */
 })
-
-if (index - 3 < 0) {
-  console.log('start')
-  let blocksToAppend = shuffle(arrAnimal)
-  blocksToAppend = window.innerWidth > 1350 ? blocksToAppend.slice(0, 6) : blocksToAppend.slice(0, 4)
-  const newBlocks = generationTwoBlocks(blocksToAppend)
-  newBlocks.forEach((item) => {
-    scrollAnimals.prepend(item.cloneNode(true))
-  })
-}
 
 prev.addEventListener('click', e => {
   let twoBlocks = document.querySelectorAll(".two_blocks")
@@ -274,7 +330,7 @@ prev.addEventListener('click', e => {
     blocksToAppend = window.innerWidth > 1350 ? blocksToAppend.slice(0, 6) : blocksToAppend.slice(0, 4)
     const newBlocks = generationTwoBlocks(blocksToAppend)
     newBlocks.forEach((item) => {
-      /* scrollAnimals.splice(2, 0, item.cloneNode(true)) */
+     
       scrollAnimals.prepend(item.cloneNode(true))
     })
     twoBlocks = document.querySelectorAll(".two_blocks")
@@ -287,3 +343,4 @@ prev.addEventListener('click', e => {
   }
 
 })
+ */
