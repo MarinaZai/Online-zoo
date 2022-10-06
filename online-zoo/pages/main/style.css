@@ -183,26 +183,77 @@
   justify-content: center;
   max-width: 100vw;
   background: url(../../assets/images/section_three/palm_bg_left.png) no-repeat left bottom,
-    url(../../assets/images/section_three/strelitzia_bg_right.png) no-repeat right bottom,
+    url(../../assets/images/section_three/strelitzia_bg_right.png) no-repeat right bottom
+    /* ,
     url(../../assets/icons/section_three_icons/arrow_elips_2.png) no-repeat left 9.1% top 38.8%,
-    url(../../assets/icons/section_three_icons/arrow_elips_1.png) no-repeat right 9.3% top 38.5%;
+    url(../../assets/icons/section_three_icons/arrow_elips_1.png) no-repeat right 9.3% top 38.5%  */
+  ;
 }
 
 .container_section_three {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1160px;
+  max-width: 1160px;
+  width: 100%;
   gap: 80px;
   margin-bottom: 100px;
 }
 
+/*  */
 .scroll_animals {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
   gap: 30px;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 1px;
+  scroll-behavior: smooth;
 }
 
+.arrow {
+  width: 62px;
+  height: 62px;
+  border-radius: 100%;
+}
+
+.prev {
+  background-image: url(../../assets/icons/section_three_icons/arrow_elips_2.png);
+  position: absolute;
+  left: 138px;
+  top: calc(220% - 30px);
+}
+
+.next {
+  background-image: url(../../assets/icons/section_three_icons/arrow_elips_1.png);
+  position: absolute;
+  right: 143px;
+  top: calc(220% - 30px);
+}
+
+/* .scroll_animals::after {
+  content: url(../../assets/icons/section_three_icons/arrow_elips_1.png);
+  position: absolute;
+  border-radius: 100%;
+  top: 46.2%;
+  right: -79px;
+  cursor: pointer;
+}
+
+.scroll_animals::before {
+  content: url(../../assets/icons/section_three_icons/arrow_elips_2.png);
+  position: absolute;
+  border-radius: 100%;
+  top: 46%;
+  left: -83px;
+  cursor: pointer;
+} */
+
+/*  */
+.two_blocks{
+  transition: all 0.5s;
+}
 .one_block_image {
   outline: 1px solid #fe9013;
   border-radius: 5px;
@@ -210,6 +261,11 @@
   height: 426px;
   overflow: hidden;
 }
+
+.one_block_image+.one_block_image {
+  margin-top: 24px;
+}
+
 
 .description_image {
   display: flex;
@@ -240,10 +296,6 @@
 .container_section_three button {
   border: none;
   margin-right: 0;
-}
-
-.bottom_image {
-  margin-top: -10px;
 }
 
 /*Pick and feed a friend*/
@@ -398,6 +450,7 @@
   flex-direction: column;
   align-items: center;
   width: 1160px;
+  overflow: hidden;
 }
 
 .title_section_five {
@@ -413,8 +466,10 @@
 .testimonials_block_section_five {
   display: flex;
   gap: 29px;
-  flex-wrap: wrap;
+/*   flex-wrap: wrap; */
+  overflow: hidden;
 }
+
 
 .one_testimonial_block {
   display: flex;
@@ -516,7 +571,7 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  width: 115.19px;
+  width: 12.5%;
   border-radius: 5px;
   -webkit-appearance: none;
   height: 6px;
@@ -682,9 +737,14 @@ input[type="range"]::-webkit-slider-thumb {
 /*button section one active*/
 button:hover {
   cursor: pointer;
-  background: #e47209;
+  background-color: #e47209;
   box-sizing: border-box;
   transition: 0.5s;
+  opacity: 0.8;
+}
+
+.arrow:focus {
+  background-color: #4b9200;
 }
 
 .button:focus {
@@ -841,23 +901,24 @@ body:has(.header_wrapper #menu-toggle:checked) .overlay {
   display: block;
 }
 
-.overlay{
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   z-index: 10;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   display: none;
 }
+
 @media screen and (max-width:1000px) {
   .delete {
     display: none;
   }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1350px) {
   .left_block {
     gap: 6vw;
     padding-right: 26vw;
@@ -929,15 +990,23 @@ body:has(.header_wrapper #menu-toggle:checked) .overlay {
 
   .section_three {
     background: url(../../assets/images/section_three/palm_bg_left.png) no-repeat left bottom/15%,
-      url(../../assets/images/section_three/strelitzia_bg_right.png) no-repeat right bottom/24%,
-      url(../../assets/icons/section_three_icons/arrow_elips_2.png) no-repeat left 37.7% top 36.7%,
-      url(../../assets/icons/section_three_icons/arrow_elips_1.png) no-repeat right 37.6% top 36.7%;
+      url(../../assets/images/section_three/strelitzia_bg_right.png) no-repeat right bottom/24%;
     margin-top: 199px;
     padding-bottom: 41px;
   }
 
   .scroll_animals {
     padding-left: 30px;
+  }
+
+  .prev {
+    left: 354px;
+    top: calc(188% - 30px);
+  }
+
+  .next {
+    right: 352px;
+    top: calc(188% - 31px);
   }
 
   .one_block_image {
@@ -1222,9 +1291,7 @@ body:has(.header_wrapper #menu-toggle:checked) .overlay {
     margin-top: 0px;
     padding-bottom: 0px;
     background: url(../../assets/images/section_three/palm_bg_left.png) no-repeat left bottom/15%,
-      url(../../assets/images/section_three/strelitzia_bg_right.png) no-repeat right bottom/24%,
-      url(../../assets/icons/section_three_icons/arrow_elips_2.png) no-repeat left 41.7% top 37%,
-      url(../../assets/icons/section_three_icons/arrow_elips_1.png) no-repeat right 42.6% top 37%;
+      url(../../assets/images/section_three/strelitzia_bg_right.png) no-repeat right bottom/24%;
   }
 
   .container_section_three {
@@ -1233,6 +1300,16 @@ body:has(.header_wrapper #menu-toggle:checked) .overlay {
 
   .scroll_animals {
     padding-left: 20px;
+  }
+
+  .prev {
+    left: 243px;
+    top: calc(142% - 27px);
+  }
+
+  .next {
+    right: 246px;
+    top: calc(143% - 35px);
   }
 
   .one_block_image {
@@ -1340,11 +1417,12 @@ body:has(.header_wrapper #menu-toggle:checked) .overlay {
 }
 
 @media screen and (max-width: 638px) {
-  .section_three {
-    background: url(../../assets/images/section_three/palm_bg_left.png) no-repeat left bottom/15%,
-      url(../../assets/images/section_three/strelitzia_bg_right.png) no-repeat right bottom/24%,
-      none,
-      none;
+  .prev {
+    display: none;
+  }
+
+  .next {
+    display: none;
   }
 
   .favorite_animal_online button {
@@ -1564,3 +1642,21 @@ body:has(.header_wrapper #menu-toggle:checked) .overlay {
     margin-top: 29px;
   }
 }
+
+
+
+/* .scroll_animals {
+  display: none;
+}
+
+.current {
+  display: inline-flex;
+}
+.prev img{
+margin-left: 9.1%;
+top: 38.8%;
+}
+.next {
+  left: 9.3%;
+  top: 38.5%;
+} */
