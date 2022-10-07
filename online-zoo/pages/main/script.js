@@ -199,12 +199,10 @@ const scrollAnimals = document.querySelector('.scroll_animals');
 
 let parentElement
 
-
 const elementsForRender = generationTwoBlocks(shuffledAnimals)
 elementsForRender.forEach((item) => {
   scrollAnimals.appendChild(item)
 })
-
 
 const prev = document.querySelector('.prev')
 const next = document.querySelector('.next')
@@ -226,7 +224,6 @@ let twoBlocks = document.querySelectorAll(".two_blocks")
 
 let isAnimateFinished = true
 next.addEventListener('click', e => {
-  console.log("ffffffff")
   if (isAnimateFinished) {
     isAnimateFinished = false
     scrollAnimals.innerHTML = '';
@@ -239,7 +236,7 @@ next.addEventListener('click', e => {
     setTimeout(() => {
       scrollAnimals.classList.remove('fromRightToLeft')
       isAnimateFinished = true
-    }, 980)
+    }, 700)
   }
 })
 
@@ -256,6 +253,21 @@ prev.addEventListener('click', e => {
     setTimeout(() => {
       scrollAnimals.classList.remove('fromLeftToRight')
       isAnimateFinished = true
-    }, 980)
+    }, 700)
   }
 })
+
+/* testimonials karusel */
+const rangeLine = document.querySelector('.section_five_line');
+
+
+
+// const oneBlockTestimonials = document.querySelector('.one_testimonial_block');
+
+rangeLine.addEventListener("input", event => {
+  const allBlocksSection = document.querySelector('.allBlocksSection');
+const parentWidth = allBlocksSection.offsetWidth;
+const allOneTestimonialBlocks = document.querySelectorAll('.one_testimonial_block')
+const widthOne = parentWidth/allOneTestimonialBlocks.length
+  allBlocksSection.style.transform = `translateX(${widthOne * - (event.target.value)}px)`
+});
