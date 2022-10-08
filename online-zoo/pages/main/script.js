@@ -259,15 +259,38 @@ prev.addEventListener('click', e => {
 
 /* testimonials karusel */
 const rangeLine = document.querySelector('.section_five_line');
-
-
-
-// const oneBlockTestimonials = document.querySelector('.one_testimonial_block');
-
 rangeLine.addEventListener("input", event => {
   const allBlocksSection = document.querySelector('.allBlocksSection');
-const parentWidth = allBlocksSection.offsetWidth;
-const allOneTestimonialBlocks = document.querySelectorAll('.one_testimonial_block')
-const widthOne = parentWidth/allOneTestimonialBlocks.length
+  const parentWidth = allBlocksSection.offsetWidth;
+  const allOneTestimonialBlocks = document.querySelectorAll('.one_testimonial_block')
+  const widthOne = parentWidth / allOneTestimonialBlocks.length
   allBlocksSection.style.transform = `translateX(${widthOne * - (event.target.value)}px)`
 });
+
+//popup
+const popUpParent = document.querySelector('.popup_block')
+const popUpChildren = document.querySelectorAll('.one_testimonial_block');
+const overlayOnPopup = document.querySelector('.overlay')
+const closePopup = document.querySelector('.close_popup')
+popUpChildren.forEach((item) => {
+  item.addEventListener('click', e => {
+    const one = e.currentTarget
+    popUpParent.appendChild(one)
+    const ele = document.querySelector('.testimonial_one_user')
+    one.style.maxWidth = '275px'
+    one.style.height = '495px'
+    ele.style.width = '255px'
+    popUpParent.style.display = 'block'
+    overlayOnPopup.style.display = 'block'
+  })
+})
+closePopup.addEventListener('click', e => {
+  popUpParent.removeChild(popUpParent.lastChild)
+  popUpParent.style.display = 'none'
+  overlayOnPopup.style.display = 'none'
+})
+overlayOnPopup.addEventListener('click', e => {
+  popUpParent.removeChild(popUpParent.lastChild)
+  popUpParent.style.display = 'none'
+  overlayOnPopup.style.display = 'none'
+})
