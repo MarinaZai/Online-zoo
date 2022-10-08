@@ -64,3 +64,29 @@ const overlay = document.querySelector('.overlay');
 overlay.addEventListener('click', e => { 
   menu_toggle.checked = false
 })
+
+//amount range
+const input = document.querySelectorAll('.range_block')
+const numbers = document.querySelectorAll('option')
+const anotherAmountInput = document.querySelector('#number_amount')
+
+input.forEach((item) => {
+  item.addEventListener('input', e => {
+    const arrayResult = Array.from(numbers).reverse()[e.target.value - 1].value
+    anotherAmountInput.value = arrayResult
+  })
+})
+
+const arrayResult = Array.from(numbers).reverse()
+  const arrayResultAnother = arrayResult.map((elem)=> {
+  return elem.value
+})
+
+anotherAmountInput.addEventListener('input', e => {
+  if(arrayResultAnother.includes(e.target.value)) {
+   const indexOfValue = arrayResultAnother.indexOf(e.target.value)
+    input.forEach((item) => {
+      item.value = indexOfValue +1
+    })
+  }
+})

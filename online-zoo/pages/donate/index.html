@@ -102,21 +102,24 @@
         </div>
         <div class="amount_text">Amount</div>
         <div class="range_amount">
-          <input type="range" min="1" max="8" step="1" value="8" id="range" list="tickmarks">
+          <input type="range" min="1" max="8" step="1" value="3" id="range" list="tickmarks" class="range_visible1 range_block">
+          <input type="range" min="1" max="7" step="1" value="5" id="range" list="tickmarks" class="range_visible2 range_block">
+          <input type="range" min="1" max="5" step="1" value="3" id="range" list="tickmarks" class="range_visible3 range_block">
+         <!--  <input type="range" min="1" max="8" step="1" value="8" id="range" list="tickmarks" class="range_visible4"> -->
           <datalist id="tickmarks">
             <option value="5000" label="$5000"></option>
-            <option value="10" label="$2000"></option>
-            <option value="20" label="$1000"></option>
-            <option value="30" label="$500"></option>
-            <option value="40" label="$250"></option>
-            <option value="50" label="$100"></option>
-            <option value="60" label="$50"></option>
-            <option value="70" label="$25"></option>
+            <option value="2000" label="$2000"></option>
+            <option value="1000" label="$1000"></option>
+            <option value="500" label="$500"></option>
+            <option value="250" label="$250"></option>
+            <option value="100" label="$100"></option>
+            <option value="50" label="$50"></option>
+            <option value="25" label="$25"></option>
           </datalist>
           <!-- ????????????????????? -->
         </div>
         <div class="feed_a_friend">
-          <input type="number" id="number_amount" placeholder="Another amount">
+          <input type="number" id="number_amount" placeholder="100">
           <div class="checkbox_inputs">
             <form action="">
               <label for="Monthly">
